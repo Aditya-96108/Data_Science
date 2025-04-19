@@ -20,7 +20,12 @@ class Dataset:
 
 ds1= DataScientist("Aditya",["python","pandas","Machine Learning"])
 
-data = Dataset("C:/Users/2000147400/Downloads/Flights-Dataset-master/Flights-Dataset-master/data.csv")
+# Using a custom index (labels)
+scores = pd.Series([0.85, 0.90, 0.78], index=['Model A', 'Model B', 'Model C'])
+print(scores['Model B'])  # Access value by label
+
+
+data = Dataset("C:/Users/91749/Downloads/fortune1000.csv")
 print(data.summary())
 print(data.missing_values())
 ds1.show_info()
